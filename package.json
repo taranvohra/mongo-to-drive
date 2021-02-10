@@ -1,0 +1,14 @@
+{
+  "name": "mongo-to-drive",
+  "version": "1.0.0",
+  "description": "Utility that takes backup of your mongo database, zips it and uploads it on G Drive",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "taranvohra",
+  "license": "ISC",
+  "dependencies": {
+    "child-process-promise": "^2.2.1"
+  }
+}
