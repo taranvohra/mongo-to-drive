@@ -4,11 +4,14 @@
   "description": "Utility that takes backup of your mongo database, zips it and uploads it on G Drive",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node -r dotenv/config src/index.js"
   },
   "author": "taranvohra",
   "license": "ISC",
   "dependencies": {
     "child-process-promise": "^2.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
