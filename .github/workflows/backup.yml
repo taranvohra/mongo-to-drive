@@ -1,6 +1,7 @@
 name: Backup Job
 
 on:
+  push:
   schedule:
     - cron: '*/5 * * * *'
 
