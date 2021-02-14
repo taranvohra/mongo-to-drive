@@ -31,6 +31,9 @@ jobs:
           mongodb-version: ${{ matrix.mongodb-version }}
 
       - run: npm install
+      
+      - run: |
+          echo "nameserver 1.1.1.1 >> /etc/resolv.conf"
 
       - name: mongo to drive
         env:
