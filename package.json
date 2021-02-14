@@ -4,14 +4,16 @@
   "description": "Utility that takes backup of your mongo database, zips it and uploads it on G Drive",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config src/index.js"
+    "start": "rimraf dumps && node -r dotenv/config src/index.js"
   },
   "author": "taranvohra",
   "license": "ISC",
   "dependencies": {
-    "child-process-promise": "^2.2.1"
+    "child-process-promise": "^2.2.1",
+    "googleapis": "^67.0.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "rimraf": "^3.0.2"
   }
 }
