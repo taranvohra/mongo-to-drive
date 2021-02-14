@@ -22,6 +22,8 @@ const dumpDatabaseLocally = async () => {
     .join('_')}.tar.gz`;
   await exec(`tar -zcvf ${compressedFileName} ${dbDumpPath}`);
 
+  fs.rmSync(DB_DUMP_BASE, { recursive: true, force: true });
+
   return compressedFileName;
 };
 
@@ -40,6 +42,9 @@ const uploadToGDrive = async (fileName) => {
       body: fs.createReadStream(fileName),
     },
   });
+
+  fs.rmSync(fileName, { force: true });
+
   return uploadRes.data.id;
 };
 
