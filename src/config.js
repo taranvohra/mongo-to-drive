@@ -7,6 +7,7 @@ let vars = {
   G_DRIVE_REDIRECT_URIS: [],
   G_DRIVE_ACCESS_TOKEN: '',
   G_DRIVE_REFRESH_TOKEN: '',
+  G_DRIVE_TOKEN_EXPIRY_DATE: '',
   G_DRIVE_BACKUP_FOLDER_ID: '',
 };
 
@@ -26,6 +27,7 @@ const oAuth2Client = new google.auth.OAuth2(
 oAuth2Client.setCredentials({
   access_token: vars.G_DRIVE_ACCESS_TOKEN,
   refresh_token: vars.G_DRIVE_REFRESH_TOKEN,
+  expiry_date: Number(vars.G_DRIVE_TOKEN_EXPIRY_DATE),
   token_type: 'Bearer',
 });
 
