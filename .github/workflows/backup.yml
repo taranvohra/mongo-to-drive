@@ -30,6 +30,8 @@ jobs:
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
 
+      - run: npm install
+
       - name: mongo to drive
         env:
           DB: ${{ secrets.DB }}
